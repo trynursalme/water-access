@@ -1,0 +1,73 @@
+/* static/style.css */
+/* Gradient Background */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A); /* Green gradient */
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+body.bg-gradient::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+
+/* Overlay for better text readability */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    z-index: -1;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent card */
+    border: none;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Form Inputs */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #4CAF50;
+    color: white;
+}
+
+/* Alert Animations */
+.alert-success {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gradient Button */
+.btn-gradient {
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #8BC34A, #4CAF50);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+}
